@@ -16,7 +16,7 @@ jobs:
                    input_array=(${{inputs.example-input}})
                    
                    for element in "${input_array[@]}"; do
-                     source rm-framework/$element
+                     source "${GITHUB_WORKSPACE}/rm-framework/$element"
                    done
                    
 
