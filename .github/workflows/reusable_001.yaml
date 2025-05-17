@@ -15,8 +15,9 @@ jobs:
               run: |
                    input_array=(${{inputs.example-input}})
                    echo "Array elements:"
+                   
                    for element in "${input_array[@]}"; do
-                     echo "$element"
+                     source rm-framework/$element
                    done
                    
 
