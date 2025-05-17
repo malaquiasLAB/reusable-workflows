@@ -14,7 +14,6 @@ jobs:
             - name: Print input
               run: |
                    input_array=(${{inputs.example-input}})
-                   echo "Array elements:"
                    
                    for element in "${input_array[@]}"; do
                      source rm-framework/$element
