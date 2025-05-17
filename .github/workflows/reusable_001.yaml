@@ -14,5 +14,5 @@ jobs:
             - name: Print input
               run: |
                    array="echo ${{ inputs.example-input }} | xargs"
-                   echo "Input: $array"
-                   echo "fim"
+                   
+
