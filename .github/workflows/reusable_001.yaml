@@ -16,13 +16,9 @@ jobs:
 
             - name: Print input
               run: |
+               set -e
+               set -x 
                input_array=(${{inputs.example-input}})
-               
-               ls -l 
-
-               pwd
-
-               echo "##############################"
 
                for element in "${input_array[@]}"; do
                  source "${GITHUB_WORKSPACE}/rm-framework/$element"
