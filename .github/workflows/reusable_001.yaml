@@ -11,18 +11,21 @@ jobs:
     example_job:
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
             - name: Print input
               run: |
-                   input_array=(${{inputs.example-input}})
-                   
-                   ls -l 
+               input_array=(${{inputs.example-input}})
+               
+               ls -l 
 
-                   pwd
+               pwd
 
-                   echo "##############################"
+               echo "##############################"
 
-                   for element in "${input_array[@]}"; do
-                     source "${GITHUB_WORKSPACE}/rm-framework/$element"
-                   done
+               for element in "${input_array[@]}"; do
+                 source "${GITHUB_WORKSPACE}/rm-framework/$element"
+               done
                    
 
