@@ -3,7 +3,7 @@ name: Reusable Workflow Example
 on:
     workflow_call:
         inputs:
-          example-input:
+          scripts:
             required: false
             type: string
 
@@ -18,7 +18,7 @@ jobs:
               run: |
                set -e
                set -x 
-               input_array=(${{inputs.example-input}})
+               input_array=(${{inputs.scripts}})
 
                for element in "${input_array[@]}"; do
                  source "${GITHUB_WORKSPACE}/rm-framework/$element"
