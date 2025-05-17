@@ -13,6 +13,10 @@ jobs:
         steps:
             - name: Print input
               run: |
-                   array="echo ${{ inputs.example-input }} | xargs"
+                   input_array=(${{inputs.example-input}})
+                   echo "Array elements:"
+                   for element in "${input_array[@]}"; do
+                     echo "$element"
+                   done
                    
 
