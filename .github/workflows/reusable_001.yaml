@@ -13,4 +13,6 @@ jobs:
         steps:
             - name: Print input
               run: |
-                   echo "Input value: ${{ inputs.example-input }}"
+                   array="echo ${{ inputs.example-input }} | xargs"
+                   echo "Input: $array"
+                   echo "fim"
